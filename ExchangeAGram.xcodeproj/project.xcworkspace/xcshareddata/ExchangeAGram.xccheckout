@@ -12,6 +12,8 @@
 	<dict>
 		<key>22157F7C63477C18E7BD3C2FCED319BC92AF8A2F</key>
 		<string>https://github.com/evenwerk/ExchangeAGram.git</string>
+		<key>59E8277A38C132B2D66BB6BE3766DBF948FAAEE9</key>
+		<string>https://github.com/evenwerk/ExchangeAGram.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>ExchangeAGram.xcodeproj</string>
@@ -19,6 +21,8 @@
 	<dict>
 		<key>22157F7C63477C18E7BD3C2FCED319BC92AF8A2F</key>
 		<string>../..</string>
+		<key>59E8277A38C132B2D66BB6BE3766DBF948FAAEE9</key>
+		<string>../../ExchangeAGram</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/evenwerk/ExchangeAGram.git</string>
@@ -33,6 +37,14 @@
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>22157F7C63477C18E7BD3C2FCED319BC92AF8A2F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ExchangeAGram</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>59E8277A38C132B2D66BB6BE3766DBF948FAAEE9</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ExchangeAGram</string>
 		</dict>

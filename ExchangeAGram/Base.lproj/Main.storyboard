@@ -59,6 +59,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="zqb-y6-BVs">
+                        <barButtonItem key="leftBarButtonItem" title="Profile" id="jCx-Wg-bVC">
+                            <connections>
+                                <action selector="profileTapped:" destination="BYZ-38-t0r" id="3iU-sh-ewH"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="Fa0-Jf-iXJ">
                             <connections>
                                 <action selector="snapBarButtonItemTapped:" destination="BYZ-38-t0r" id="cHI-XL-Id3"/>
@@ -67,11 +72,50 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="Dud-8q-Y41" id="q2a-ZP-ik2"/>
+                        <segue destination="BSZ-1N-juN" kind="show" identifier="profileSegue" id="Gzc-UZ-nUr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1137" y="364"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="J0B-wy-xla">
+            <objects>
+                <viewController id="BSZ-1N-juN" customClass="ProfileViewController" customModule="ExchangeAGram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yfi-5E-5Wo"/>
+                        <viewControllerLayoutGuide type="bottom" id="xl6-y9-84G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bOL-4p-kza">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DtX-x1-Hhl">
+                                <rect key="frame" x="10" y="80" width="100" height="100"/>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQ9-xU-wH6">
+                                <rect key="frame" x="138" y="103" width="127" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="686-uq-uCa" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="50" y="400" width="200" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="fbLoginView" destination="686-uq-uCa" id="3aE-zw-ofc"/>
+                        <outlet property="nameLabel" destination="qQ9-xU-wH6" id="znC-T7-nT5"/>
+                        <outlet property="profileImageView" destination="DtX-x1-Hhl" id="sz9-UV-w0U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iyd-3C-FYX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1917" y="364"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7mn-Yq-nhv">
