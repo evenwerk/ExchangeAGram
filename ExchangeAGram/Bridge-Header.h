@@ -6,4 +6,4 @@
 //  Copyright (c) 2015 evenwerk. All rights reserved.
 //
 
-#<import <FacebookSDK/FacebookSDK.h>
+#import "FacebookSDK.framework/Headers/FacebookSDK.h"
