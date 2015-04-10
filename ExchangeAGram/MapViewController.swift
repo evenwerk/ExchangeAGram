@@ -18,7 +18,7 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
 
         let request = NSFetchRequest(entityName: "FeedItem")
-        let appDelegate:AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+        let appDelegate:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         let context:NSManagedObjectContext = appDelegate.managedObjectContext!
         var error:NSError?
         let itemArray = context.executeFetchRequest(request, error: &error)
@@ -32,7 +32,7 @@ class MapViewController: UIViewController {
                 mapView.setRegion(region, animated: true)
                 
                 let annotation = MKPointAnnotation()
-                annotation.setCoordinate(location)
+                annotation.coordinate = location
                 annotation.title = item.caption
                 mapView.addAnnotation(annotation)
             }

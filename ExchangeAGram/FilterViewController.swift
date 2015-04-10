@@ -50,7 +50,7 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        let cell:FilterCell = collectionView.dequeueReusableCellWithReuseIdentifier("MyCell", forIndexPath: indexPath) as FilterCell
+        let cell:FilterCell = collectionView.dequeueReusableCellWithReuseIdentifier("MyCell", forIndexPath: indexPath) as! FilterCell
         
             cell.imageView.image = placeHolderImage
             
@@ -124,7 +124,7 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
             textField.placeholder =  "Add caption!"
             textField.secureTextEntry = false
         }
-        let textField = alert.textFields![0] as UITextField
+        let textField = alert.textFields![0] as! UITextField
         
         let photoAction = UIAlertAction(title: "Post photo to Facebook with caption", style: UIAlertActionStyle.Destructive) { (UIAlertAction) -> Void in
             self.shareToFacebook(indexPath)
@@ -157,7 +157,7 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
         self.thisFeedItem.caption = caption
         self.thisFeedItem.filtered = true
         
-        (UIApplication.sharedApplication().delegate as AppDelegate).saveContext()
+        (UIApplication.sharedApplication().delegate as! AppDelegate).saveContext()
         
         self.navigationController?.popViewControllerAnimated(true)
 
@@ -168,10 +168,10 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
 
         let photos:NSArray = [filterImage]
         var params = FBPhotoParams()
-        params.photos = photos
+        params.photos = photos as [AnyObject]
         
         FBDialogs.presentShareDialogWithPhotoParams(params, clientState: nil) { (call, result, error) -> Void in
-            if result? != nil {
+            if result != nil {
                 println(result)
             }
             else {
